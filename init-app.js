@@ -9,23 +9,27 @@ function Connect(){
             else{
                     alert("You are connected");
             }
-    }); 
-function Disconnect(){
+    }); function Disconnect(){
  chrome.sockets.tcp.disconnect(socket1, onDisconnect);
 }
+function check()
+{
+alert("I am an alert box!");
+var test  =	document.getElementById('e0').value;
+console.log(test);
+}
 function Write(){
-    var e0 = document.getElementById('e0').checked;
-    var e1 = document.getELementById('e1').checked;
-    var e2 = document.getElementById('e2').checked;
-    var e3 = document.getElementById('e3').checked;
+	// var x = document.getElementById("demo");
+	
     chrome.sockets.tcp.onReceive.addListener(function(info) {
             var response = new Uint8Array(info.data);
-            e0.checked = (response[9]&1);//request first bit of of TCP-value
+	
+	    e0.checked = (response[9]&1);
             e1.checked = (response[9]&2);
             e2.checked = (response[9]&4);
             e3.checked = (response[9]&8);
+ 
     }); 
-
 }
 function Read(){
 writingcommand = new Uint8Array([0,0,0,0,0,8,1,15,0,0,0,4,1,15]); // modbus request
