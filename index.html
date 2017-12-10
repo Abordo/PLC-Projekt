@@ -1,0 +1,67 @@
+
+<html>
+
+<head>
+    <title>HR-Interface </title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <style>
+       
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+   
+    </style>
+
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+    <script src="jquerry-3.2.1.min.js"></script>
+
+<body>
+       <h1 class="align-center"></h1>
+    <p class="align-center">
+        <button onclick="Connect()">Connect</button>
+        <button onclick="Disconnect()">Disconnect</button>
+    </p>
+    <p class="align-center">
+        Reading of the Inputs  
+        <p class="align-center">
+        <input type = "checkbox" id = "e0" />E0 
+        <input type = "checkbox" id = "e1" />E1 
+        <input type = "checkbox" id = "e2" />E2 
+        <input type = "checkbox" id = "e3" />E3 
+    <p class="align-center">
+              <button onclick="Read()">Read the Inputs</button>
+    </p>
+    <br>
+    <p class="align-center">
+        Writing of the Outputs 
+    <p class="align-center">
+        <input type = "checkbox" id = "s0" />S0 
+        <input type = "checkbox" id = "s1" />S1 
+        <input type = "checkbox" id = "s2" />S2 
+        <input type = "checkbox" id = "s3" />S3 
+
+    <p class="align-center">
+        <button onclick="Write()">Write the Outputs</button>
+    <br>
+    </p>
+
+
+    <script src="cordova.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/init-app.js"></script>
+
+    <script src="xdk/init-dev.js"></script>
+    
+     <script src="jquerry-3.2.1.min.js"></script>
+
+
+</body>
+
+
+
+</html>
